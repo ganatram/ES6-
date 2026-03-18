@@ -56,3 +56,12 @@ let node = {
   },
   range: [0, 3],
 };
+
+let {
+  loc: { start },
+  range: [startIndex],
+} = node;
+
+console.log(start.line); // 1
+console.log(start.column); // 1
+console.log(startIndex); // 0
