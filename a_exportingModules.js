@@ -12,3 +12,5 @@ export class Rectangle {
     this.width = width;
   }
 }
+
+// all ES6 bindings are wrapped into a container (Module)

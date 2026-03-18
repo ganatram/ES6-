@@ -2,8 +2,7 @@
 //xxxxxxxxxx
 
 function abc() {
-  // function declaration hoisting !
-
+  // function declaration hoisting ! - anti-pattern
   console.log('abc executed');
 }
 
@@ -20,3 +19,11 @@ xyz();
 xyz = null; // de-referencing
 
 xyz();
+
+// javascript has 'shared architecture'
+
+// how do you protect our identifiers
+
+// namespace
+
+// ES6 - Bindings (export & import statements)
