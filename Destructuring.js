@@ -14,11 +14,26 @@ for (let i = 0; i < 10; i++) {
 // var x = new Array ()
 // var x= ''  []   ()
 
-//ES6 Array de-structuring in ES6
-var fruits = ['apples', 'oranges', 'pineapples'];
-
+// Array de-structuring in ES6
+/* var fruits = ['apples', 'oranges', 'pineapples'];
 const [f1, f2, f3] = fruits;
-
 console.log(f1);
 console.log(f2);
-console.log(f3);
+console.log(f3); */
+
+// Object de-structuring in ES6
+
+const smoothie = {
+  fats: ['avocado', 'peanut butter', 'greek yogurt'],
+  liquids: ['almond milk'],
+  greens: ['spinach', 'brocoli', 'cucumber'],
+  fruits: ['blueberry', 'pineapple', 'guava'],
+};
+
+const { fats, greens } = smoothie;
+
+console.log(fats);
+console.log(greens);
+
+console.log(fats[1]);
+console.log(greens[1]);
