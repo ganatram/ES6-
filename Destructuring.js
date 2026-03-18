@@ -22,7 +22,7 @@ console.log(f2);
 console.log(f3); */
 
 // Object de-structuring in ES6
-
+/* 
 const smoothie = {
   fats: ['avocado', 'peanut butter', 'greek yogurt'],
   liquids: ['almond milk'],
@@ -32,8 +32,27 @@ const smoothie = {
 
 const { fats, greens } = smoothie;
 
+
 console.log(fats);
 console.log(greens);
 
 console.log(fats[1]);
-console.log(greens[1]);
+console.log(greens[1]); */
+
+// mixed de-structuring in ES6
+
+let node = {
+  type: 'identifier',
+  name: 'foo',
+  loc: {
+    start: {
+      line: 1,
+      column: 1,
+    },
+    end: {
+      line: 1,
+      column: 4,
+    },
+  },
+  range: [0, 3],
+};
