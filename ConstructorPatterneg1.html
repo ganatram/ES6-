@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function base() {
+        // prototype:{}
+        this.x = 100;
+        this.y = 200;
+        var z = 300;
+      }
+
+      console.log(typeof base.prototype); // {}
+
+      var inst1 = new base();
+      console.log(typeof inst1); // object
+
+      /*  inst1 ={
+       this.x = 100;
+        this.y = 200;
+
+      } */
+
+      console.log(inst1.x); // 100
+      console.log(inst1.y); // 200
+      console.log(inst1.z); // 'undefined'
+    </script>
+  </head>
+  <body></body>
+</html>
