@@ -7,19 +7,27 @@
 
     <script>
       function Person(name, age, job) {
+        // prototype:{sayName()}
         /*   var name = 'Nicholas';
          var age=29
          var job = 'Software Engineer' */
 
+        // distinct entities
         this.name = name; // 'Nicholas';
         this.age = age; // 29
         this.job = job; // 'Software Engineer'
-        this.sayName = function () {
-          console.log(this.name);
-        };
       }
 
+      Person.prototype.sayName = function () {
+        console.log(this.name);
+      };
+
       var person1 = new Person('Nicholas', 29, 'Software Engineer');
+      var person2 = new Person('Greg', 25, 'Doctor');
+
+      console.log(person1.sayName()); // SCA [person1{},Person.prototype{}]
+
+      console.log(person2.sayName()); // SCA [person1{},Person.prototype{}]
 
       /* person 1= {
 
