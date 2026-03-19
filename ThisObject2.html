@@ -12,19 +12,12 @@
         name: 'My Object',
 
         getNameFunc: function () {
-          // var that = this;
-
-          return function () {
-            return this.name; // SCA[getNameFunc(),object{}] // avoid this keyword
-          };
-
-          /*   return () => {
-            return this.name; // SCA[getNameFunc(),object{}]
-          }; */
+          // avoid closure
+          return this.name;
         },
       };
 
-      console.log(object.getNameFunc()());
+      console.log(object.getNameFunc());
     </script>
   </head>
   <body></body>
