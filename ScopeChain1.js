@@ -1,29 +1,16 @@
-var color = 'blue';
-
-var x = 300;
+var color = 'blue'; // 'red'
 
 function changeColor() {
   // SCA [changeColor(),window{}]
 
-  var anotherColor = 'red';
-
-  var x = 200;
+  var anotherColor = 'red'; // 'blue'
 
   function swapColors() {
-    //
+    // SCA [swapColors(),changeColor(),window{}]
+    var tempColor = anotherColor; // 'red'
 
-    function alert() {
-      console.log('alert on leave today');
-    }
-
-    alert('hi'); // [swapColors(),changeColor(),window]
-
-    var x = 100;
-
-    console.log(x); // SCA [swapColors(),changeColor(),window{}]
-
-    var tempColor = anotherColor;
     anotherColor = color;
+
     color = tempColor;
   }
 
@@ -31,4 +18,4 @@ function changeColor() {
 }
 changeColor();
 
-console.log('color is now ' + color);
+console.log('color is now ' + color); // ? 'red'

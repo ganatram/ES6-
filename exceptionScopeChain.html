@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script type="text/javascript">
+      function f1() {
+        var x = 100;
+
+        with (document.location) {
+          // var x = 'hello from with statement';
+          var a = 10;
+          var b = 20;
+          var c = 30;
+        }
+
+        console.log(x); // SCA [with,f1(),window{}]
+      }
+
+      f1();
+    </script>
+  </head>
+  <body></body>
+</html>
