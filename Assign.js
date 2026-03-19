@@ -11,3 +11,5 @@ console.log(coffee); // {cream:false,sugar:false}
 const coffeeWithSugar = Object.assign({}, coffee, { sugar: true });
 
 coffeeWithSugar; // {cream:false,sugar:true}
+
+// https://github.com/ganatram/ES6-
