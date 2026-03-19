@@ -7,46 +7,64 @@
 
     <script>
       function Person(name, age, job) {
-        // var name = 'Nicholas'
-        // var age = 29
-        // var job ='Software Engineer'
+        /*   var name = 'Nicholas';
+         var age=29
+         var job = 'Software Engineer' */
 
-        this.n = name; // 'Nicholas'
-        this.a = age; // 29
-        this.j = job; //'Software Engineer'
-        /*  this.sayName = function () {
+        this.name = name; // 'Nicholas';
+        this.age = age; // 29
+        this.job = job; // 'Software Engineer'
+        this.sayName = function () {
           console.log(this.name);
-        }; */
+        };
       }
 
       var person1 = new Person('Nicholas', 29, 'Software Engineer');
 
-      /*  person1 = { 
+      /* person 1= {
 
-       this.n = name; // 'Nicholas'
-        this.a = age; // 29
-        this.j = job; //'Software Engineer'
+           this.name = name; // 'Nicholas';
+        this.age = age; // 29
+        this.job = job;  // 'Software Engineer'
+        this.sayName = function () {
+          console.log(this.name);
+        };
+
 
 
       } */
 
-      console.log(person1.n); // 'Nicholas'
-      console.log(person1.name); // 'undefined'
+      console.log(person1.sayName()); // 'Nicholas';
 
-      //   var person2 = new Person('Greg', 27, 'Doctor');
+      var person2 = new Person('Greg', 27, 'Doctor');
 
-      //   person1.sayName(); //"Nicholas"
-      //   person2.sayName(); //"Greg"
+      /*   person 2= {
 
-      /*   console.log(person1 instanceof Object); //true
+           this.name = name; // 'Greg';
+        this.age = age; // 25
+        this.job = job;  // 'doctor'
+        this.sayName = function () {
+          console.log(this.name);
+        };
+
+
+
+      } */
+
+      console.log(person1.sayName === person2.sayName); // false
+
+      /*       person1.sayName(); //"Nicholas"
+      person2.sayName(); //"Greg"
+
+      console.log(person1 instanceof Object); //true
       console.log(person1 instanceof Person); //true
       console.log(person2 instanceof Object); //true
-      console.log(person2 instanceof Person); //true */
+      console.log(person2 instanceof Person); //true
 
-      /*       console.log(person1.constructor == Person); //true
-      console.log(person2.constructor == Person); //true */
+      console.log(person1.constructor == Person); //true
+      console.log(person2.constructor == Person); //true
 
-      //   console.log(person1.sayName == person2.sayName); //false
+      console.log(person1.sayName == person2.sayName); //false */
     </script>
   </head>
   <body></body>
